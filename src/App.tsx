@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react';
+import Home from './pages/Home';
 
 function App() {
-  const [status, setStatus] = useState('Loading...');
-  useEffect(() => {
-    fetch('https://api.ask-allie.com/api/health')
-      .then(res => res.json())
-      .then(data => setStatus(data.status))
-      .catch(() => setStatus('Error connecting to backend'));
-  }, []);
-  return <div>Backend status: {status}</div>;
+  return <Home />;
 }
 
 export default App;
